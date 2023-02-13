@@ -1,4 +1,5 @@
 FROM pavja2/qpep:satellite
+RUN rm /etc/apt/sources.list.d/opensand.list
 #RUN echo "deb [trusted=yes] http://packages.net4sat.org/opensand xenial stable" | tee /etc/apt/sources.list.d/opensand.list
 #RUN apt-get update
 #RUN apt-cache madison opensand
