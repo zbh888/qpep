@@ -1,4 +1,5 @@
 FROM ubuntu:16.04
+RUN rm /etc/apt/sources.list.d/opensand.list
 RUN echo "deb [trusted=yes] http://packages.net4sat.org/opensand xenial oldstable" | tee /etc/apt/sources.list.d/opensand.list
 RUN apt-get update
 RUN apt-get install -y netcat
