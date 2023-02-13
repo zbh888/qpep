@@ -1,7 +1,12 @@
 FROM pavja2/qpep:satellite
 RUN rm /etc/apt/sources.list.d/opensand.list
-#RUN echo "deb [trusted=yes] http://packages.net4sat.org/opensand xenial stable" | tee /etc/apt/sources.list.d/opensand.list
+
+#RUN apt-get install -y  apt-transport-https ca-certificates
+#RUN echo "deb [trusted=yes] http://raw.githubusercontent.com/CNES/net4sat-packages/master/ focal stable" |  tee /etc/apt/sources.list.d/opensand.list
+#RUN apt-get install -y curl
+#RUN curl -sS https://raw.githubusercontent.com/CNES/net4sat-packages/master/gpg/net4sat.gpg.key | apt-key add
 #RUN apt-get update
+
 #RUN apt-cache madison opensand
 #RUN apt-get install -y opensand
 #RUN apt-get install -y opensand-manager
