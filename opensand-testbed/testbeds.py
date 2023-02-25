@@ -24,7 +24,8 @@ class BasicTestbed(object):
         logger.debug("Starting Testbed Containers")
 
         # Start the docker containers
-        subprocess.call(["docker-compose", "up", "-d"], env=my_env)
+        cmd = "docker compose -f docker-compose.yml up -d"
+        subprocess.call([cmd, env=my_env, shell=True)
 
         # Wait for the opensand container to initialize then send a command to run the simulation
         logger.debug("Starting Opensand Platform")
